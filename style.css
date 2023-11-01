@@ -434,4 +434,17 @@ nav ul li a:hover::after{
     border-color: #007bff;
     background-color: #1e1e1e;
   }
+
+.made-with-love {
+  text-align: center;
+  background-color: #ffcccc;
+  padding: 10px;
+  font-size: 18px;
+  color: #ff0000;
+}
+
+.heart {
+  color: #ff0000;
+}
+
   

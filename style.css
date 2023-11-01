@@ -32,6 +32,53 @@ body{
    background-position: center;
 }
 
+/* Text Animation */
+.fade-in {
+  animation: fadeIn 3s ease-in-out forwards; /* Use animation-fill-mode: forwards */
+  opacity: 0;
+}
+
+.slide-in {
+  animation: slideIn 2s ease-in-out forwards; /* Use animation-fill-mode: forwards */
+  transform: translateX(-100%);
+}
+
+.highlight {
+  color: #ff004f;
+  animation: highlight 1s alternate infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes highlight {
+  0% {
+    color: #000;
+  }
+  /* 50% {
+    color: #ff004f;
+  } */
+  100% {
+    color: #ff004f;
+  }
+}
+
+
 /* The CSS code padding: 10px 10%;
 sets the padding for an element,
 with 10 pixels of padding on the top and bottom and 10% of the element's width as padding on the left and right. */
@@ -233,6 +280,12 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+
+  .project:hover {
+    transform: scale(1.05); /* Scale the card slightly on hover */
   }
   
   .project img {

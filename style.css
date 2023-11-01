@@ -435,6 +435,12 @@ nav ul li a:hover::after{
     background-color: #1e1e1e;
   }
 
+#msg{
+  color: #61b752;
+  margin-top: 10px;
+  display: block;
+}
+
 .made-with-love {
   text-align: center;
   background-color: #ffcccc;

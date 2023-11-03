@@ -8,7 +8,7 @@ The width and height of the element include the content, padding, and border, wi
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Georgia', serif;
     box-sizing: border-box;
 }
 
@@ -35,34 +35,40 @@ body{
 
 /* Text Animation */
 .fade-in {
-  animation: fadeIn 3s ease-in-out forwards; /* Use animation-fill-mode: forwards */
+  animation: fadeIn 3s ease-in-out forwards;
   opacity: 0;
 }
 
 .slide-in {
-  animation: slideIn 2s ease-in-out forwards; /* Use animation-fill-mode: forwards */
+  animation: slideIn 2s ease-in-out forwards;
   transform: translateX(-100%);
 }
 
 .highlight {
   color: #ff004f;
-  animation: highlight 1s alternate infinite ease-in-out;
+  animation: highlight 2s alternate infinite ease-in-out;
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0.8;
+  }
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes slideIn {
-  from {
+  0% {
     transform: translateX(-100%);
   }
-  to {
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
     transform: translateX(0);
   }
 }
@@ -70,12 +76,15 @@ body{
 @keyframes highlight {
   0% {
     color: #000;
+    transform: scale(1);
   }
-  /* 50% {
+  50% {
     color: #ff004f;
-  } */
+    transform: scale(1.1);
+  }
   100% {
     color: #ff004f;
+    transform: scale(1);
   }
 }
 
@@ -175,7 +184,7 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
-    font-size: 35px;
+    font-size: 45px;
     font-weight: 600;
     color:#fff;
 }

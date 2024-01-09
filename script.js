@@ -14,3 +14,6 @@ onExperience.addEventListener("click", () => {
   educationSection.style.display = "none";
   experienceSection.style.display = "block";
 });
+
+
+
